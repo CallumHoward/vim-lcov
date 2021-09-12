@@ -7,19 +7,19 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 if !exists("g:vim_lcov_marker_covered")
-  let g:vim_lcov_marker_covered = '✓'
+  let g:vim_lcov_marker_covered = '▎'
 endif
 if !exists("g:vim_lcov_marker_uncovered")
-  let g:vim_lcov_marker_uncovered = '✘'
+  let g:vim_lcov_marker_uncovered = '▎'
 endif
 if !exists("g:vim_lcov_marker_fold")
   let g:vim_lcov_marker_fold = 1
 endif
 
 " green on black
-highlight VimLcovCoveredLineSignText   ctermbg=232 ctermfg=82  guibg=232 guifg=82
+highlight VimLcovCoveredLineSignText   ctermbg=232 ctermfg=82  guibg=none guifg=green
 " red on black
-highlight VimLcovUncoveredLineSignText ctermbg=232 ctermfg=197 guibg=232 guifg=197
+highlight VimLcovUncoveredLineSignText ctermbg=232 ctermfg=197 guibg=none guifg=red
 
 " NOTE
 " linehl can also be specified when defining a sign to highlight entire line,
